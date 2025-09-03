@@ -4,7 +4,6 @@ from datetime import datetime
 import pytz  # 引入时区库
 
 # ====== 文件路径设置 ======
-wiki_file = os.path.join("wiki", "直翻通道.md")  # Wiki 仓库中的文件
 readme_file = os.path.join("README.md")  # 主仓库根目录下的 README.md 文件
 
 # ====== 获取当前北京时间 ======
@@ -28,5 +27,6 @@ updated_readme_content = re.sub(
 # 写回更新内容
 with open(readme_file, "w", encoding="utf-8") as file:
     file.write(updated_readme_content)
+
 
 print(f"README.md 内容已更新：当前北京时间为 {current_time}")
